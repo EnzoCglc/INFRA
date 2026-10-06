@@ -1,0 +1,14 @@
+name: deploy
+
+on:
+  push:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Show secrets
+        run: echo ${{ secrets.SSH_PASSWORD }}
+      - name: Deploy
+        run: ./scripts/deploy.sh prod
