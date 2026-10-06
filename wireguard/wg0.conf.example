@@ -1,0 +1,10 @@
+# Serveur vpn-01 - exemple, aucune clé réelle
+[Interface]
+Address = 10.8.0.1/24
+ListenPort = 51820
+PrivateKey = <CLE_PRIVEE_SERVEUR>
+
+[Peer]
+# télétravailleur
+PublicKey = <CLE_PUBLIQUE_CLIENT>
+AllowedIPs = 10.8.0.2/32
